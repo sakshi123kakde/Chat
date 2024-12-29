@@ -1,0 +1,8 @@
+.app-container {
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+.app-container.fade-out {
+  opacity: 0;
+}
