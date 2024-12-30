@@ -1,55 +1,61 @@
-.landing-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(120deg, #f6d365, #fda085);
-    overflow: hidden;
-    animation: fadeIn 2s ease-in-out;
-  }
-  
-  .animated-text {
-    font-size: 3rem;
-    color: #fff;
-    animation: slideIn 3s ease-in-out;
-  }
-  
-  .animation-box {
-    width: 100px;
-    height: 100px;
-    margin-top: 20px;
-    background: #fff;
-    border-radius: 50%;
-    animation: bounce 2s ease-in-out;
-  }
-  
-  @keyframes fadeIn {
-    from {
+.first-view-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(120deg, #1e3c72, #2a5298);
+  overflow: hidden;
+  animation: fadeIn 1.5s ease-in-out, fadeOut 1s ease-in-out 2s forwards;
+}
+
+.logo-animation {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  animation: bounce 1.5s infinite;
+}
+
+.tagline {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ddd;
+  animation: fadeInText 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
       opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
   }
-  
-  @keyframes slideIn {
-    from {
-      transform: translateY(-50px);
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
       opacity: 0;
-    }
-    to {
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
       transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+      opacity: 0;
+  }
+  to {
       opacity: 1;
-    }
   }
-  
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-30px);
-    }
-  }
-  
+}

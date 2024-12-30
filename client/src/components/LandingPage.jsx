@@ -3,9 +3,9 @@ import './LandingPage.css';
 
 const LandingPage = () => {
   return (
-    <div className="landing-container">
-      <h1 className="animated-text">Welcome to Our Platform</h1>
-      <div className="animation-box"></div>
+    <div className="first-view-container">
+      <div className="logo-animation">🌐 Chatify</div>
+      <p className="tagline">Connecting People in Real-Time</p>
     </div>
   );
 };
