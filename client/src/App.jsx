@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import SignIn from './components/SignIn';
+import SignUp from './components/SignUp';
 import LandingPage from './components/LandingPage';
 
 const App = () => {
@@ -8,11 +10,11 @@ const App = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setFadeOut(true); // Start fade-out animation
-      setTimeout(() => setShowLandingPage(false), 1000); // Wait for fade-out to complete
-    }, 3000); // Display LandingPage for 2 seconds
+      setFadeOut(true);
+      setTimeout(() => setShowLandingPage(false), 1000);
+    }, 3000);
 
-    return () => clearTimeout(timer); // Clean up the timer
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -22,9 +24,10 @@ const App = () => {
           <LandingPage />
         </div>
       ) : (
-        <div className="signin-container">
-          <SignIn />
-        </div>
+        <Routes>
+          <Route path="/" element={<SignIn />} />
+          <Route path="/SignUp" element={<SignUp />} />
+        </Routes>
       )}
     </div>
   );
