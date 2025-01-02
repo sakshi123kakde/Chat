@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Navigate, Routes, Route } from 'react-router-dom';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import LandingPage from './components/LandingPage';
@@ -25,7 +25,8 @@ const App = () => {
         </div>
       ) : (
         <Routes>
-          <Route path="/" element={<SignIn />} />
+          <Route path='/' element={< Navigate to='/signIn'/>}/>
+          <Route path="/signIn" element={<SignIn />} />
           <Route path="/SignUp" element={<SignUp />} />
         </Routes>
       )}
