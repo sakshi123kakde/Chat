@@ -3,7 +3,7 @@ import { Navigate, Routes, Route } from 'react-router-dom';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import LandingPage from './components/LandingPage';
-import Home from './components/Home';
+import Chat from './components/Chat';
 
 const App = () => {
   const [showLandingPage, setShowLandingPage] = useState(true);
@@ -27,7 +27,7 @@ const App = () => {
       ) : (
         <Routes>
           <Route path='/' element={< Navigate to='/signIn'/>}/>
-          <Route path='/home' element={<Home/>}/>
+          <Route path='/chat' element={<Chat/>}/>
           <Route path="/signIn" element={<SignIn />} />
           <Route path="/SignUp" element={<SignUp />} />
         </Routes>

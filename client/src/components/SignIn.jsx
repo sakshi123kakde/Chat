@@ -43,7 +43,7 @@ const SignIn = () => {
         localStorage.setItem('token', jwtToken);
         localStorage.setItem('loggedInUser', name);
         setTimeout(() => {
-          navigate('/home');
+          navigate('/chat');
         }, 1000);
       } else {
         handleError(message || 'Invalid credentials');
